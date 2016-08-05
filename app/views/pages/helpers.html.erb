@@ -1,0 +1,39 @@
+<div class="page-header">
+	<h1>Helpers</h1>
+</div>
+
+<legend>link_to</legend>
+
+<a href="/">
+	<strong>Home</strong> - Página Principal
+</a>
+
+<hr>
+
+<%= link_to '<strong>Home</strong> - Página Principal'.html_safe, '/' %>
+
+<hr>
+
+<%= link_to '/' do %>
+	<strong>Home</strong> - Página Principal
+<% end -%>
+
+<hr>
+
+
+	
+<ol>
+<% 10.times do -%>
+	<%= content_tag :li, 'Coisinha' %>
+<% end -%>
+</ol>
+
+
+
+<img src="/assets/td-logo.png" alt="Teresina digital">
+<hr>
+<%= image_tag 'td-logo.png', :alt => "Teresina digital" %>
+<hr>
+<%= image_tag 'td-logo.png', alt: "Teresina digital" %>
+
+

@@ -1,0 +1,16 @@
+PRÁTICA: HELLO WORD
+
+	1) CRIE 4 PÁGINAS NA SUA APLICAÇÃO:
+		- HOME
+		- QUEM SOMOS
+		- SERVIÇOS
+		- CONTATOS
+
+		CONTROLLER:
+			- pages
+				ACTIONS:
+					- home
+					- about_us
+					- services
+					- contacts
+

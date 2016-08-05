@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  registration: MyString
+  birth_date: 2016-07-27
+  status: false
+  age: 1
+
+two:
+  name: MyString
+  registration: MyString
+  birth_date: 2016-07-27
+  status: false
+  age: 1

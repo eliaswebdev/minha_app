@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MinhaApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+
+  <body>
+
+
+	<nav class="navbar navbar-default navbar-static-top">
+		<div class="navbar-header"> <button type="button" class="collapsed navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a href="#" class="navbar-brand">Minha APP</a> </div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+			<ul class="nav navbar-nav">
+			<!-- 
+				<li><a href="/">Home</a></li>
+				<li><a href="/students">Students</a></li>
+				<li><a href="/quem-somos">Quem Somos</a></li>
+				<li><a href="/servicos">Servicos</a></li>
+				<li><a href="/fale-conosco">Fale Conosco</a></li>
+				<li><a href="/helpers">Helpers</a></li>
+			-->
+				<%= content_tag :li, link_to('Home', root_path) %>
+				<%= content_tag :li, link_to('Alunos', students_path) %>
+				<%= content_tag :li, link_to('Quem Somos', about_us_path) %>
+				<%= content_tag :li, link_to('Servicos', services_path) %>
+				<%= content_tag :li, link_to('Fale Conosco', contacts_path) %>
+				<%= content_tag :li, link_to('Helpers', helpers_path) %>
+			</ul>
+		</div>
+	</nav>
+
+
+	<div class="container">
+    	<%= yield %>
+    </div>
+    
+  </body>
+</html>
