@@ -1,0 +1,19 @@
+<div class="page-header">
+	<%= link_to "Voltar", photos_path, class: "btn btn-primary pull-right" %>
+	<h1>Show</h1>
+</div>
+
+<ul>
+	<li>ID: <%= @photo.id -%></li>
+	<li>Title: <%= @photo.title -%></li>
+	<li>Description: <%= @photo.description -%></li>
+	<li>File: <%= @photo.file -%></li>
+	<li>Status: <%= @photo.status -%></li>
+	<li>Created At: <%= @photo.created_at -%></li>
+	<li>Updated At	: <%= @photo.updated_at -%></li>
+</ul>
+
+<hr>
+
+parametros:
+<%= debug params -%>

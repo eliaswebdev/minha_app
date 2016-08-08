@@ -1,0 +1,41 @@
+<div class="page-header">
+	<%= link_to "Voltar", photos_path, class: "btn btn-primary pull-right" %>
+	<h1>New</h1>
+</div>
+
+
+<%= render 'form' -%>
+
+
+
+<!-- 
+<%= form_tag photos_path, method: :post do  -%>
+	<p>	
+		<%= label_tag :title -%>
+		<%= text_field_tag :title -%>
+	</p>
+
+	<p>	
+		<%= label_tag :description -%> <br>
+		<%= text_area_tag :description -%>		
+	</p>
+
+	<p>	
+		<%= label_tag :file -%>
+		<%= text_field_tag :file -%>
+	</p>
+
+	<p>	
+		<label>
+			<%= radio_button_tag :status, true -%> True
+		</label>
+
+		<label>
+			<%= radio_button_tag :status, false -%> False
+		</label>
+	</p>
+
+	<%= submit_tag 'Cadastrar', class: 'btn btn-primary' -%>
+
+<% end -%>
+ -->
