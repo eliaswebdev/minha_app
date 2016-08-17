@@ -1,0 +1,67 @@
+# default: &default
+#   adapter: sqlite3
+#   pool: 5
+#   timeout: 5000
+
+# development:
+#   <<: *default
+#   database: db/development.sqlite3
+
+# test:
+#   <<: *default
+#   database: db/test.sqlite3
+
+# production:
+#   <<: *default
+#   database: db/production.sqlite3
+
+
+
+
+# default: &default
+#   adapter: mysql2
+#   encoding: utf8
+#   pool: 5
+#   username: root
+#   password: root
+#   host: localhost
+
+# development:
+#   <<: *default
+#   database: minhaapp_development
+
+# test:
+#   <<: *default
+#   database: minhaapp_test
+
+# production:
+#   <<: *default
+#   database: mymysql_production
+#   username: mymysql
+#   password: <%= ENV['MYMYSQL_DATABASE_PASSWORD'] %>
+
+
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: postgres
+  password: root
+  host: localhost
+  port: 5432
+
+development:
+  <<: *default
+  database: minhaapp_development
+
+test:
+  <<: *default
+  database: minhaapp_test
+
+production:
+  <<: *default
+  database: minhaapp_production
+  username: minhaapp
+  password: <%= ENV['BASE_DATABASE_PASSWORD'] %>
+
