@@ -1,20 +1,9 @@
-<%= form_for @contact do |f| -%>
-	<p>		
-		<%= f.label :name -%>
-		<%= f.text_field :name -%>
-	</p>
-	<p>		
-		<%= f.label :email -%>
-		<%= f.text_field :email -%>
-	</p>
-	<p>		
-		<%= f.label :mobile -%>
-		<%= f.text_field :mobile -%>
-	</p>
-	<p>		
-		<%= f.label :message -%>
-		<%= f.text_area :message -%>
-	</p>
+<%= simple_form_for @contact do |f| -%>			
+	<%= f.input :name -%>
+	<%= f.input :email -%>
+	<%= f.input :mobile -%>
+	<%= f.input :message, hint: "Caracteres: #{@contact.message.try(:size)}" -%>
 
-	<%= f.submit -%>
+
+	<%= f.submit nil, class: 'btn btn-primary' -%>
 <% end -%>

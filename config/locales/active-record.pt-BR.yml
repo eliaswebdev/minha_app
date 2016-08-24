@@ -1,0 +1,12 @@
+pt-BR:
+  activerecord:
+    models:
+      student: Aluno
+      contact: Contato
+
+    attributes:
+      contact:
+        name: Nome
+        email: E-mail
+        mobile: Celular
+        message: Mensagem

@@ -19,7 +19,7 @@ class ContactsController < ApplicationController
 		@contact.status = false
 		
 		if @contact.save
-			redirect_to contacts_path
+			redirect_to contacts_path, notice: 'A mensagem foi enviada com sucesso!'
 		else
 			render :new
 		end
@@ -30,7 +30,7 @@ class ContactsController < ApplicationController
 
 	def update
 		if @contact.update(contact_params)
-			redirect_to contacts_path
+			redirect_to contacts_path, notice: 'A mensagem foi atualizada com sucesso!'
 		else
 			render :edit
 		end
@@ -38,7 +38,7 @@ class ContactsController < ApplicationController
 
 	def destroy
 		@contact.delete
-		redirect_to contacts_path
+		redirect_to contacts_path, notice: 'A mensagem foi excluída com sucesso!'
 	end
 
 	private

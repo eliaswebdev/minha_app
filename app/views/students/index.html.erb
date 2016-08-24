@@ -1,9 +1,9 @@
-<p id="notice"><%= notice %></p>
-  
 <div class="page-header">
   <%= link_to 'New Student', new_student_path, class: 'btn btn-primary pull-right' %>
-  <h1>Students</h1>
+  <h1>Students (<%= @students.size -%>)</h1>
 </div>
+
+<%= paginate @students -%>
 
 <table class="table table-bordered">
   <thead>
@@ -27,8 +27,8 @@
         <td><%= student.birth_date %></td>
         <td><%= student.status %></td>
         <td><%= student.age %></td>
-        <td><%= student.created_at %></td>
-        <td><%= student.updated_at %></td>
+        <td><%= l(student.created_at) %></td>
+        <td><%=l student.updated_at %></td>
         <td><%= link_to 'Show', student, class: 'btn btn-info' %></td>
         <td><%= link_to 'Edit', edit_student_path(student), class: 'btn btn-primary' %></td>
         <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
@@ -38,5 +38,7 @@
 </table>
 
 <br>
+
+<%= paginate @students -%>
 
 

@@ -36,6 +36,10 @@
 
 
 	<div class="container">
+		<% if notice.present? -%>
+			<p class="alert alert-success"><%= notice %></p>
+		<% end -%>
+
     	<%= yield %>
     </div>
     

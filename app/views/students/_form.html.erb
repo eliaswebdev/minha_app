@@ -1,40 +1,10 @@
-<%= form_for(student) do |f| %>
-  <% if student.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
-
-      <ul>
-      <% student.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= f.label :registration %>
-    <%= f.text_field :registration %>
-  </div>
-
-  <div class="field">
-    <%= f.label :birth_date %>
-    <%= f.date_select :birth_date %>
-  </div>
-
-  <div class="field">
-    <%= f.label :status %>
-    <%= f.check_box :status %>
-  </div>
-
-  <div class="field">
-    <%= f.label :age %>
-    <%= f.number_field :age %>
-  </div>
+<%= simple_form_for(@student) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :registration %>
+  <%#= f.input :birth_date, as: :string, input_html: {type: 'date'}, class: 'coisinha' %>
+  <%= f.input :birth_date, start_year: (Date.current-18.year).year, end_year: 1960 %>
+  <%= f.input :status, as: :radio_buttons, collection: [['Sim', true], ['Não', false]] %>
+  <%= f.input :age %>
 
   <div class="actions">
     <%= f.submit %>

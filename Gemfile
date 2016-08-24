@@ -17,6 +17,11 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 
+gem 'simple_form'
+gem 'ffaker'
+gem 'kaminari'
+	
+
 group :development, :test do
   gem 'byebug', platform: :mri
 end
